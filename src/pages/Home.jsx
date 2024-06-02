@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "../components/Button/Button";
-import right from '../assets/bluejew.jpg'
 import Slider from "../components/Slider/Slider";
 
 
