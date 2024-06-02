@@ -1,0 +1,78 @@
+.CategoryList {
+  padding: 20px;
+  background-color: #DCE8F2;
+  border-radius: 8px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows horizontal scrolling if items overflow */
+  white-space: nowrap; /* Prevents items from wrapping to the next line */
+}
+
+.CategoryList ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CategoryList li {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
+}
+
+.CategoryList li:last-child {
+  margin-right: 0;
+}
+
+.CategoryList a {
+  text-decoration: none;
+  color: #7790A6;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.CategoryList a:hover {
+  color: #5C758D;
+}
+
+.AddCategoryWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .CategoryList ul {
+    flex-direction: column; /* Stacks items vertically */
+    white-space: normal; /* Allows wrapping */
+  }
+
+  .CategoryList li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Adds space between items */
+    flex: 1 1 auto; /* Allows flex items to grow and shrink */
+  }
+
+  .AddCategoryWrapper {
+    margin-top: 10px;
+  }
+}
+
+/* Media query for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .CategoryList ul {
+    flex-wrap: wrap; /* Wraps items to new lines */
+  }
+
+  .CategoryList li {
+    flex: 1 1 45%; /* Flex-basis adjusts to fit two items per row */
+    margin-bottom: 10px;
+  }
+}
